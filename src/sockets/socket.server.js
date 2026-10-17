@@ -16,7 +16,7 @@ export const initializeSocket = (httpServer)=>{
     //it is a custom event
       socket.on("elon",(msg)=>{
             console.log(msg);
-            io.emit("musk");
+            io.emit("musk","Hello server se hu via socket");
         });
 });
 
