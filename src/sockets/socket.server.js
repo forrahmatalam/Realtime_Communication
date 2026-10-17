@@ -12,8 +12,11 @@ export const initializeSocket = (httpServer)=>{
    socket.on("disconnect", () => {
         console.log("Socket disconnected", socket.id); //ye socket id connection ke lie hoti hai na ki user ke lie
     });
+
+    //it is a custom event
       socket.on("elon",(msg)=>{
             console.log(msg);
+            io.emit("musk");
         });
 });
 
